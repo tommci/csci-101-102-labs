@@ -38,3 +38,11 @@ def score_finder(playernames, scores, name):
         j += 1
     if j != 'y':    # if player isn't found, j won't = y
         print('OUTPUT player not found')
+
+def union(list1, list2):
+    output_list = []
+    for i in list1:
+        output_list.append(i)
+    for i in list2:
+        output_list.append(i)
+    return output_list
