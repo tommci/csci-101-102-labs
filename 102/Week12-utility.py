@@ -27,3 +27,14 @@ def find_word_count(list, word):
             if j == word:
                 counter += 1
     return counter
+
+def score_finder(playernames, scores, name):
+    j = 0
+    for i in playernames:
+        if name.lower() == i.lower():
+            print(f'OUTPUT {playernames[j]} got a score of {scores[j]}')
+            j = 'y'     # For checking if player not found
+            break
+        j += 1
+    if j != 'y':    # if player isn't found, j won't = y
+        print('OUTPUT player not found')
