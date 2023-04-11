@@ -17,3 +17,13 @@ def update_string(string1, string2, index):
         else:
             output_str += string1[i]
     print(f'OUTPUT {output_str}')
+
+def find_word_count(list, word):
+    counter = 0
+    for i in list:
+        wordsplit = []
+        wordsplit = i.split(' ')
+        for j in wordsplit:
+            if j == word:
+                counter += 1
+    return counter
