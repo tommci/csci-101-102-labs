@@ -26,7 +26,7 @@ def find_word_count(list, word):
         wordsplit = []
         wordsplit = i.split(' ')
         for j in wordsplit:
-            if j == word:
+            if j.lower() == word.lower():
                 counter += 1
     return counter
 
