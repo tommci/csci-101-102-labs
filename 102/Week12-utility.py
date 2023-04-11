@@ -20,15 +20,20 @@ def update_string(string1, string2, index):
             output_str += string1[i]
     print(f'OUTPUT {output_str}')
 
+punctuation = ['!', ',', '.', '?', '*', '-', '/', '(', ')']
+
 def find_word_count(list, word):
-    counter = 0
+    formatted = []
     for i in list:
-        wordsplit = []
-        wordsplit = i.split(' ')
-        for j in wordsplit:
-            if j.lower() == word.lower():
-                counter += 1
-    return counter
+        word_split = []
+        word_split = i.split(' ')
+        for j in word_split:
+            for k in j:
+                if k in punctuation:
+                    j = j.replace(k, '')
+            j = j.lower()
+            formatted.append(j)
+    return formatted.count(word.lower())
 
 def score_finder(playernames, scores, name):
     j = 0
