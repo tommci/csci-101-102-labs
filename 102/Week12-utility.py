@@ -46,3 +46,16 @@ def union(list1, list2):
     for i in list2:
         output_list.append(i)
     return output_list
+
+def intersect(list1, list2):
+    output_list = []
+    if len(list1) > len(list2):
+        for i in list1:
+            if i in list2:
+                output_list.append(i)
+    else:
+        for i in list2:
+            if i in list1:
+                output_list.append(i)
+    print(output_list)
+    return output_list
