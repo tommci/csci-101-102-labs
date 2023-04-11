@@ -24,16 +24,20 @@ punctuation = ['!', ',', '.', '?', '*', '-', '/', '(', ')']
 
 def find_word_count(list, word):
     formatted = []
+    wordcount = 0
     for i in list:
-        word_split = []
-        word_split = i.split(' ')
-        for j in word_split:
-            for k in j:
-                if k in punctuation:
-                    j = j.replace(k, '')
-            j = j.lower()
-            formatted.append(j)
-    return formatted.count(word.lower())
+        for j in i:
+            if j not in punctuation:
+                j = j.lower()
+                formatted.append(j)
+    counter = 0
+    for i in formatted:
+        if i == word[counter]:
+            counter += 1
+        if counter == len(word):
+            wordcount += 1
+            counter = 0
+    return wordcount
 
 def score_finder(playernames, scores, name):
     j = 0
