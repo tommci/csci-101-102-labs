@@ -1,8 +1,8 @@
 #   Thomas McInnes
 #  ​ CSCI 102 – Section B
 #   Week 12 (Git)
-#   References:
-#   Time:
+#   References: None
+#   Time: 1 hour 30 minutes
 
 import math
 
