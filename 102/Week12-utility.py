@@ -4,6 +4,8 @@
 #   References:
 #   Time:
 
+import math
+
 def load_file(filename):
     with open(filename, 'r') as f:
         content = f.read().splitlines()     # splitlines gets rid of the /n in the output
@@ -67,3 +69,13 @@ def not_in(list1, list2):
             output_list.append(i)
     print(output_list)
     return output_list
+
+def is_prime(number):
+    if number <= 1:
+        return False
+    
+    for i in range(2, int(math.sqrt(number)) + 1):  # Instead of iterating from 2 to number, you can check sqrt(number)
+        if number % i == 0:
+            return False
+        
+    return True
